@@ -104,44 +104,7 @@ public class EdiText extends JFrame implements ActionListener{
         modeMenu.add(lightMode);
         modeMenu.add(vincentMode);
         modeMenu.add(natureMode);
-/*
-
-        JMenu findReplaceMenu = new JMenu("Find & Replace");
-
-        find = new JTextField("Find");
-        replace = new JTextField("Replace");
-
-
-        find.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if(!isClicked){
-                    find.setText("");
-                    replace.setText("");
-                }
-                isClicked = true;
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {}
-
-            @Override
-            public void mouseReleased(MouseEvent e) {}
-
-            @Override
-            public void mouseEntered(MouseEvent e) {}
-
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-
-        button = new JButton("*");
-        button.addActionListener(this);
-
-        findReplaceMenu.add(find);
-        findReplaceMenu.add(replace);
-        findReplaceMenu.add(button);
-*/
+        
         JMenu findMenu = new JMenu("Find & Replace");
         JMenuItem m13 = new JMenuItem("Find-Replace");
         m13.addActionListener(this);
@@ -300,12 +263,6 @@ public class EdiText extends JFrame implements ActionListener{
         else if (command.equals("Nature Mode")) {       // for setting nature mode
             modes.createMode("nature mode");         // calling createMode() method from object of ModeFactory class
         }
-/*        else if (command.equals("*")){
-            TextClass.findReplace(area, find.getText(), replace.getText());
-            find.setText("Find");
-            replace.setText("Replace");
-            isClicked=false;
-        }*/
         else if (command.equals("Find-Replace")) {
             String findW = JOptionPane.showInputDialog(frame, "Find Word: ");
             String replaceW = JOptionPane.showInputDialog(frame, "Replace Word: ");
