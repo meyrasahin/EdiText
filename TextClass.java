@@ -41,7 +41,7 @@ public class TextClass {
     }
 
     public static String reformText(String oldText, ArrayList<String> words_AL) {
-        String fileName = "C:\\Users\\hümeyra şahin\\IdeaProjects\\oopproje\\src\\words.txt";
+        String fileName = "words.txt";
         ArrayList<String> dict = readFile(fileName);    // calling readFile() method
 
         String[][] editedTable = new String[words_AL.size()][2];    // keep the old version and new version of the words
